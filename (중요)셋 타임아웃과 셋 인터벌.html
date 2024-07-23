@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="5; url=http://naver.com"> -->
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(document).ready(function(){
+            var i = 0;
+            setInterval(function(){
+                if(i == 100){
+                    i = 0;
+                }else{
+                    i ++;
+                }
+
+                $(".count").text(i);
+            }, 100)
+
+            var j = 0;
+            setInterval(function(){
+                if(j == 5){
+                    location.href = "http://naver.com"
+                }else{  
+                    j ++;
+                }
+
+                $(".time").text("time : " + j);
+            }, 1000)
+        })// fin
+    </script>
+
+    <style type="text/css">
+        .count{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid red;
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin: 100px auto;
+            color: red;
+        }
+
+        .time{
+            width: 200px;
+            height: 50px;
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            border: 2px solid blue;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="count"></div>
+
+    <div class="time"></div>
+</body>
+</html>

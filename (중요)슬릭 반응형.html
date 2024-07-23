@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css">
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/slick.js"></script>
+    <script lang="java">
+        $(document).ready(function(){
+            $(".move").slick({
+                autoplay: true,
+                // slidesToShow 는 보여지는 이미지의 수, slidesToScroll은 넘겨질 이미지의 수를 말한다
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                // 반응형으로 제어할때 responsive가 쓰임
+                responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 390,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+            })// .move.slick
+
+            $(".ani").slick({
+                autoplay: true,
+                slidesToShow: 2,
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            dots: true,
+                            arrows: false
+                        }
+                    }
+                ]
+            })// .ani.slick
+
+            $(".kia_img").slick({
+                autoplay:true,
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: true,
+                            arrows: false
+                        }
+                    }
+                ]
+            })// .kia_img.slick
+            
+        })// fin
+    </script>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li{
+            list-style: none;
+        }
+
+        .box{
+            width: calc(124px * 4);
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .move{}
+        .move li{}
+
+        .animal{
+            width: 1200px;
+            margin: 50px auto;
+            border: 10px groove red;
+        }
+
+        .ani{}
+
+        .kia{
+            width: 980px;
+            margin: 50px auto;
+        }
+
+        .kia_img{}
+
+        @media screen and (max-width: 600px){
+            .animal{
+                width: 600px;
+                border: 10px groove blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="move">
+            <li><img src="source/normal_01.png" alt=""></li>
+            <li><img src="source/normal_02.png" alt=""></li>
+            <li><img src="source/normal_03.png" alt=""></li>
+            <li><img src="source/normal_04.png" alt=""></li>
+            <li><img src="source/normal_05.png" alt=""></li>
+            <li><img src="source/normal_06.png" alt=""></li>
+            <li><img src="source/normal_07.png" alt=""></li>
+            <li><img src="source/normal_08.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="animal">
+        <ul class="ani">
+            <li><img src="source/animal01.png" alt=""></li>
+            <li><img src="source/animal02.png" alt=""></li>
+            <li><img src="source/animal03.png" alt=""></li>
+            <li><img src="source/animal04.png" alt=""></li>
+            <li><img src="source/animal05.png" alt=""></li>
+            <li><img src="source/animal06.png" alt=""></li>
+            <li><img src="source/animal07.png" alt=""></li>
+            <li><img src="source/animal08.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="kia">
+        <div class="kia_img">
+            <div><img src="source/KIA01.JPG" alt=""></div>
+            <div><img src="source/KIA02.JPG" alt=""></div>
+            <div><img src="source/KIA03.JPG" alt=""></div>
+            <div><img src="source/KIA04.JPG" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>

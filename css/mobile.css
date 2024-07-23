@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.box1{
+    width: 100%;
+    float: none;
+}
+.box2{
+    width: 100%;
+    float: none;
+    height: 300px;
+}
+.box3{
+    width: 100%;
+    float: none;
+    height: 300px;
+}
